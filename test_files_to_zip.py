@@ -9,7 +9,7 @@ file_direction = (os.path.join(os.path.dirname(os.path.abspath(__file__)), 'reso
 #  Созание архива
 with ZipFile('resources/zip_file.zip', 'w') as zip_file:
     for folder_name, sub_folders, file_names in \
-            os.walk((os.path.join(os.path.dirname(os.path.abspath(__file__)), 'files'))):
+            os.walk((os.path.join(os.path.dirname(os.path.abspath(__file__)), 'resources/files'))):
         for file_name in file_names:
             file_path = os.path.join(folder_name, file_name)
             zip_file.write(file_path, basename(file_path))
